@@ -1,0 +1,74 @@
+
+
+
+
+
+
+
+
+
+<%= form_for :user , url:'/users' do |f| %>
+  <fieldset>
+	<legend>Sign Up</legend>
+	<ul>
+	<li id="first-name">
+	<label style="display: none;" id="control_gen_2" for="firstName">First name</label>
+	<div class="fieldgroup">
+    		<%= f.text_field :firstName, placeholder:'First Name',size:55 , tabindex:6 , maxlength:20 %>
+        </div>
+  
+         </li>
+
+        <li id="last-name">
+	<label style="display: none;" id="control_gen_2" for="lastName">Last name</label>
+	<div class="fieldgroup">
+    		<%= f.text_field :lastName, placeholder:'Last Name',size:55 , tabindex:7 , maxlength:20 %>
+        </div>
+  
+        </li>
+        
+         <li id="email-address">
+	 <label style="display: none;" id="control_gen_2" for="lastName">Email Address</label>
+	 <div class="fieldgroup">
+    		<%= f.text_field :email, placeholder:'Email Address',size:55 , tabindex:8 , maxlength:128 %>
+         </div>
+  
+         </li>
+         <li id="password">
+	 <label style="display: none;" id="control_gen_2" for="password">Password</label>
+	 <div class="fieldgroup">
+    		<%= f.password_field :password, placeholder:'Password',size:55 , tabindex:9 , maxlength:128 %>
+         </div>
+  
+         </li>
+         </ul>
+          
+         </ul>
+             <div class="form-bottom-row">
+	<p class="policy">
+	By clicking Join Now, you agree to LinkedIn's <a href="http://www.linkedin.com/static?key=user_agreement">User Agreement</a>, <a 	 href="http://www.linkedin.com/static?key=privacy_policy">Privacy Policy</a> and 						
+        <a href="http://www.linkedin.com/legal/cookie-policy">Cookie Policy</a>.
+	</p>
+        <p class="action">
+        <script>utmx_section("JoinNow-Button")</script>
+          
+        <%= f.submit :submit , placeholder: 'Join Now', tabindex:9 ,class: 'btn-action' %>
+        </p>
+        </div>
+    </fieldset>
+ 
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

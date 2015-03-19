@@ -1,0 +1,29 @@
+<div id="form_box">
+    <h1>User Profile</h1>
+
+            <%= form_for @users , :url => { :action => :edit } , :method => :get do |f| %>
+                <p>
+    <%= f.label :firstName %><br />
+    <%= f.text_field :firstName %>
+  </p>
+  <p>
+    <%= f.label :lastName %><br />
+    <%= f.text_field :lastName %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+            <% end %>
+
+
+<h1 style="color: RED">
+        <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+ </h1>
+ </div>

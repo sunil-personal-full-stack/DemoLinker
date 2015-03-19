@@ -1,0 +1,5 @@
+class WelcomeController < ApplicationController
+  layout "user_reg"
+  def index
+  end
+end

@@ -1,0 +1,21 @@
+<header>
+   <div id="content">
+      <h2><span class="text-gradient"></span><span class="headline"><script>utmx_section("Headline")</script>
+       Welcome to Linkedin.com
+       </span></h2>
+       
+   </div>
+</header>
+<div id="form_box">
+        <h3>Please vist your registered email id and enter the verification code sent to your id. To enjoy the social networking. </h3>
+        <%= form_for :verification , url:'/users/verification' , method: :get do |f1| %>
+        <%= f1.hidden_field :id, :value => @user %>
+        <%= f1.text_field :code ,size:10 , tabindex:1  %>
+        <%= f1.submit :submit , placeholder:'Verify', tabindex:9 , class:'btn-secondary' %>
+        <% end %>
+        <h1 style="color: RED">
+        <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+ </h1>
+</div>

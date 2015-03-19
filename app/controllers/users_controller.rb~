@@ -1,0 +1,27 @@
+class UsersController < ApplicationController
+    def new
+     
+    end
+
+    def show
+        
+    end
+
+    def create
+           @user = User.new(users_params)
+         if @user.save
+            UserMailer.welcome_email(@user).deliver!
+            render action:'show'
+          else render action:'new'
+    end
+
+  
+end
+
+
+ private
+
+  def users_params
+    params.require(:user).permit(:firstName,:lastName,:email,:password)
+  end
+   end

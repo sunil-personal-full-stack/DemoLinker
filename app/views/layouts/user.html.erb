@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="os-linux" lang="en"><!--<![endif]--><head>
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+
+
+
+
+
+
+
+
+<title>World's Largest Professional Network | LinkedIn</title>
+
+
+
+
+</head>
+<!--**************************************************************************Body Part Begin**************************************-->
+
+<body  class="guest v2 new-ghome login-in-header chrome-v5 chrome-v5-responsive sticky-bg guest js " id="pagekey-guest-home">
+
+	<script type="text/javascript">document.body.className+=" js ";</script>
+	
+
+	<div id="header">
+		<div class="container">
+		<h1><img src="../assets/logo_132x32_2.png" alt="LinkedIn" class="logo" height="32" width="132"></h1>
+		
+        </div>
+           <ul class="menu1">
+              <li><%= link_to "Home", "/users/show_home" %></li>
+              <li><%= link_to "Profile", "/users/show_profile" %></li>
+
+              <li class="lastItem"><%= link_to "Logout", "/users/logout" %></li>
+
+           </ul>
+    </div>
+   <div id="main-wrapper">
+   <div id="main" >
+   <div id="global-error">
+   </div>
+    
+    <%= yield %>
+
+
+
+</div>
+</div>
+<%= render partial: 'layouts/footer' %>
+
+
+</body></html>
